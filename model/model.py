@@ -40,6 +40,18 @@ class Model:
         """
 
         # TODO
+        #prendo la funzione get_tour_attrazioni che restituisce un dizionario e,
+        # per ogni tour aggiungo le attrazioni e per ogni attrazione aggiungo i tour,
+        # in modo da ottenere i tour con tutte le attrazioni e le attrazioni con tutti i tour
+
+        for tour in self.tour_map:
+            tour[id].attrazioni.add(tour)
+            pass
+
+        for attrazione in self.attrazioni_map:
+            attrazione[id].tour.add()
+            pass
+
 
     def genera_pacchetto(self, id_regione: str, max_giorni: int = None, max_budget: float = None):
         """
